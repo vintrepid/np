@@ -86,3 +86,7 @@ config :phoenix_live_view,
 
 # Disable swoosh api client as it is only required for production adapters.
 config :swoosh, :api_client, false
+
+config :live_debugger,
+  enabled: true,
+  port: String.to_integer(System.get_env("LIVE_DEBUGGER_PORT") || "4008")
