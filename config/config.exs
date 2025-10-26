@@ -53,6 +53,9 @@ config :tailwind,
   ]
 
 # Configures Elixir's Logger
+
+# Configure CLDR backend for ex_money
+config :ex_cldr, default_backend: Np.Cldr
 config :logger, :default_formatter,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
